@@ -1,0 +1,27 @@
+# Save XGBoost model (baseline version for comparison)
+import joblib
+
+# Assuming xgb_baseline is your trained XGBoost model from earlier
+# If you don't have it, train a simple baseline XGBoost
+from xgboost import XGBRegressor
+
+xgb_baseline = XGBRegressor(
+    n_estimators=100,
+    learning_rate=0.1,
+    max_depth=5,
+    subsample=0.8,
+    colsample_bytree=0.8,
+    random_state=42,
+    objective='reg:absoluteerror'
+)
+
+# Train on your data
+xgb_baseline.fit(X_train_xgb[enhanced_features], y_train_xgb)
+
+# Save
+joblib.dump(xgb_baseline, 'xgb_model.pkl')
+print("✅ XGBoost model saved as xgb_model.pkl")
+
+# Download
+from google.colab import files
+files.download('xgb_model.pkl')
