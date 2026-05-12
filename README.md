@@ -78,5 +78,5 @@ MIT
 
 ## 🔗 Links
 
-- [Live Demo](https://huggingface.co/spaces/enneanine/insurance-predictor)
+- [Live Demo](https://enneanine-insurance-predictor.hf.space)
 - [Dataset Source](https://www.kaggle.com/datasets/mirichoi0218/insurance)
